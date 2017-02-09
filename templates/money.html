@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>姍筱的帳本：{{month}}</h1>
+        <br>
+        
+        <A href="/money/excel/{{month}}">匯出到Excel</A>
+        <table>
+        {% for money in moneys %}
+                <tr><Td>({{money.time| date:"l"}}){{money.time}}</Td><td>{{money.item}}</td><td>{{money.price}}尛幣~</td></tr>
+        {% endfor %}
+        </table>
+{% endblock %}

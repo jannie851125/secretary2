@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="." method="post">
+
+<table>
+  <tr>
+    <td> 
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="送出"></p>
+   </td>
+  <td>
+        
+   <img src="/static/ma+1.png" alt="">
+ </td>
+  </tr>
+  
+  </table>
+
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <h1>姍筱的日誌(,,・ω・,,)：{{month}}</h1>
+<br>
+  <img src="/static/ma_secret.png" alt="">
+<br>
+       <a href="/diary/word/{{month}}">匯出到Word</a><BR>
+{% for diary in diaries %}
+         <h3>{{diary.time}}--{{diary.memo}}</h3>
+         <BR>
+{% endfor %}
+{% endblock %}

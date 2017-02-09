@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <br>
+
+
+        {% for month in months %}
+<br><br>
+                <h3>{{month.date}}</h3>
+<table  >
+<tr> 
+  <h3>
+    
+    
+    <td align="center" valign="center" ><a href="/diary/{{month.date}}">姍筱日誌</a></td> </h3>
+    <h3>  <td align="center" valign="center"><a href="/money/{{month.date}}">尛帳本</a></td></h3> 
+    
+</tr>
+<tr>
+  
+  <td align="center" valign="center"><a href="/diary/{{month.date}}"><img src="/static/ma2.png" alt=""></a></td>
+
+<td align="center" valign="center"><a href="/money/{{month.date}}"><img src="/static/ma$.png" alt=""></a></td>
+      
+</tr>  
+</table>    
+
+
+
+        {% endfor %}
+{% endblock %}
